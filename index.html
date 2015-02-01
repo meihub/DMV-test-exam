@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="app">
+<div  ng-controller='MainCtrl'>
+    <div class="jumbotron">
+        <div class="row choices-section" ng-show="selectedQuestion">
+            <div class="question">Question {{questionCount}}/{{totalNumOfQs}}: {{currentQuestion.question}}</div>
+            <img class='question image' ng-src="{{currentQuestion.image}}">
+            <div class="panel panel-default" ng-class='{active:clicked==="a"}' ng-click="choiceSelection('a')">
+                <div class="description panel-body">A. {{currentQuestion.choices.a}}</div>
+                <img ng-src="{{currentQuestion.choices.a}}">
+            </div>
+            <div class="panel panel-default" ng-class='{active:clicked==="b"}' ng-click="choiceSelection('b')">
+                <div class="description panel-body">B. {{currentQuestion.choices.b}}</div>
+            </div>
+            <div class="panel panel-default" ng-class='{active:clicked==="c"}' ng-click="choiceSelection('c')">
+                <div class="description panel-body">C. {{currentQuestion.choices.c}}</div>
+            </div>
+            <div class="panel panel-default" ng-class='{active:clicked==="d"}' ng-click="choiceSelection('d')">
+                <div class="description panel-body">D. {{currentQuestion.choices.d}}</div>
+            </div>
+            <button class="glyphicon glyphicon-menu-right" aria-hidden="true" ng-click="nextQuestion(clicked)" ng-disabled='clicked===""'>
+            </button>
+        </div>
+        <div class="result" ng-show="!selectedQuestion">
+            <div class="total-score">
+                <div class="correctAnswer">
+                    Total Correct Points: {{points}}
+                </div>
+
+                <div class="correctAnswer">
+                    Total Number of Questions {{totalNumOfQs}}
+                </div>
+
+                <div class="correctAnswer">
+                    Test Score: {{totalScore}}%
+                </div>
+            </div>
+            <a class='restart' href="/">Restart</a>
+            <div class="row test-score-section"  ng-repeat="completedQuestion in completedQuestions">
+                <div class="question">Question: {{completedQuestion.question}}</div>
+                <div class="panel panel-default" ng-class='{selected:completedQuestion.choices.selectedAnswer===completedQuestion.choices.a,correct:completedQuestion.choices.a===completedQuestion.choices.answer,incorrect:completedQuestion.choices.a!==completedQuestion.choices.answer}'>
+                    <div class="description panel-body">
+                        <span class="glyphicon glyphicon-ok" ng-if="completedQuestion.choices.selectedAnswer==completedQuestion.choices.answer && completedQuestion.choices.selectedAnswer==completedQuestion.choices.a"></span>
+                        <span class="glyphicon glyphicon-remove" ng-if="completedQuestion.choices.selectedAnswer!==completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.a"></span>
+                        A. {{completedQuestion.choices.a}}</div>
+
+                </div>
+                <div class="panel panel-default" ng-class='{selected:completedQuestion.choices.selectedAnswer===completedQuestion.choices.b,correct:completedQuestion.choices.b===completedQuestion.choices.answer,incorrect:completedQuestion.choices.b!==completedQuestion.choices.answer}'>
+                    <div class="description panel-body">
+                        <span class="glyphicon glyphicon-ok" ng-if="completedQuestion.choices.selectedAnswer===completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.b"></span>
+                        <span class="glyphicon glyphicon-remove" ng-if="completedQuestion.choices.selectedAnswer!==completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.b"></span>
+                        B. {{completedQuestion.choices.b}}</div>
+                </div>
+                <div class="panel panel-default" ng-class='{selected:completedQuestion.choices.selectedAnswer===completedQuestion.choices.c,correct:completedQuestion.choices.c===completedQuestion.choices.answer,incorrect:completedQuestion.choices.c!==completedQuestion.choices.answer}'>
+                    <div class="description panel-body">
+                        <span class="glyphicon glyphicon-ok" ng-if="completedQuestion.choices.selectedAnswer===completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.c"></span>
+                        <span class="glyphicon glyphicon-remove" ng-if="completedQuestion.choices.selectedAnswer!==completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.c"></span>
+                        C. {{completedQuestion.choices.c}}</div>
+                </div>
+                <div class="panel panel-default" ng-class='{selected:completedQuestion.choices.selectedAnswer===completedQuestion.choices.d,correct:completedQuestion.choices.d===completedQuestion.choices.answer,incorrect:completedQuestion.choices.d!==completedQuestion.choices.answer}'>
+                    <div class="description panel-body">
+                        <span class="glyphicon glyphicon-ok" ng-if="completedQuestion.choices.selectedAnswer===completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.d"></span>
+                        <span class="glyphicon glyphicon-remove" ng-if="completedQuestion.choices.selectedAnswer!==completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.d"></span>
+                        D. {{completedQuestion.choices.d}}</div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="description selected panel-body">SelectedAnswer: {{completedQuestion.choices.selectedAnswer}}</div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="description comment panel-body">Comment: {{completedQuestion.comment}}</div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="description answer panel-body">Answer: {{completedQuestion.choices.answer}}</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="http://underscorejs.org/underscore-min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
