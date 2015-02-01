@@ -26,15 +26,16 @@ input.col-md-2 {
 }
 
 .description {
-    display: inline-block;
     width: auto;
     height: auto;
 }
-
 .description.answer {
     font-weight: 800;
     background: lightgray;
-    width: 547px;
+}
+
+.description.comment {
+    border: 2px solid orange;
 }
 
 .description.selected {
@@ -42,9 +43,8 @@ input.col-md-2 {
 }
 
 button.glyphicon-menu-right {
-    left: 592px;
-    top: -209px;
-    padding: 28px;
+    font-size: 93px;
+    top: 300px;
 }
 
 .active{
