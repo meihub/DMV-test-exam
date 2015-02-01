@@ -12,7 +12,8 @@ $scope.questionAnswers=[
                  b:'Move your car off the road',
                  c:'Turn on your vehicle"s parking lights',
                  d:'Raise the hood',
-                    answer:'Move your car off the road'},
+                    answer:'Move your car off the road',
+                 type:'text'},
         comment:'',
         image:''
     },
@@ -22,7 +23,8 @@ $scope.questionAnswers=[
             b:'11 feet',
             c:'At least 31 feet',
             d:'More than 50 feet',
-                answer:'More than 50 feet'},
+                answer:'More than 50 feet',
+            type:'text'},
         comment:'',
         image:''
     },
@@ -32,7 +34,8 @@ $scope.questionAnswers=[
             b:'You are not required to stop',
             c:'Where you have a good view of all approaching traffic on the intersecting roadway without actually entering the roadway',
             d:'Stop completely and yield',
-                answer:'Where you have a good view of all approaching traffic on the intersecting roadway without actually entering the roadway'},
+                answer:'Where you have a good view of all approaching traffic on the intersecting roadway without actually entering the roadway',
+            type:'text'},
         comment:'',
         image:'/images/US.16.20.jpg'
     },
@@ -42,7 +45,8 @@ $scope.questionAnswers=[
             b:'Stop and remain stopped until a green signal appears',
             c:'Slow down and proceed with caution',
             d:'Stop completely and yield',
-                answer:'Slow down and proceed with caution'},
+                answer:'Slow down and proceed with caution',
+            type:'text'},
         comment:'',
         image:'/images/US.13.09.gif'
     },
@@ -53,7 +57,8 @@ $scope.questionAnswers=[
             b:'65 mph',
             c:'70 mph',
             d:'60 mph',
-            answer:'65 mph'},
+            answer:'65 mph',
+            type:'text'},
         comment:'',
         image:'/images/US.32.01.jpg'
     },
@@ -63,7 +68,8 @@ $scope.questionAnswers=[
             b:'0.02 percent',
             c:'0.12 percent',
             d:'0.10 percent',
-                answer:'0.08 percent'},
+                answer:'0.08 percent',
+            type:'text'},
         comment:'',
         image:'/images/US.36.04.jpg'
     },
@@ -73,7 +79,8 @@ $scope.questionAnswers=[
             b:'When driving on public roads',
             c:'When the car is equipped with air bags',
             d:'None of the above',
-            answer:'None of the above'},
+            answer:'None of the above',
+            type:'text'},
         comment:'The mandatory safety belt usage law requires drivers and front-seat occupants of most passenger vehicles to wear safety belts whenever they drive or ride in a motor vehicle on Ohio"s roadways.',
         image:'/images/US.39.13.jpg'
     },
@@ -83,7 +90,8 @@ $scope.questionAnswers=[
             b:'Are eliminated with an additional outside mirror on each side',
             c:'Are bigger than the blind spots of a passenger vehicle',
             d:'Are eliminated with bigger mirrors',
-            answer:'Are bigger than the blind spots of a passenger vehicle'},
+            answer:'Are bigger than the blind spots of a passenger vehicle',
+            type:'text'},
         comment:'Generally speaking, the bigger trucks are, the bigger their blind spots. Blind spots are not eliminated with bigger or additional mirrors.',
         image:'/images/US.21.27B.jpg'
     },
@@ -93,7 +101,8 @@ $scope.questionAnswers=[
             b:'Proceed, you have the right-of-way',
             c:'You must always stop',
             d:'You must give the right-of-way to pedestrians and vehicles',
-            answer:'You must give the right-of-way to pedestrians and vehicles'},
+            answer:'You must give the right-of-way to pedestrians and vehicles',
+            type:'text'},
         comment:'This is a yield sign. Three-sided red yield signs mean you must slow down and be ready to stop to let any vehicle, bicyclist, or pedestrian pass before you proceed',
         image:'/images/US.02.02.jpg'
     },
@@ -103,7 +112,8 @@ $scope.questionAnswers=[
             b:'Condition of brakes',
             c:'Condition of tires',
             d:'All of the above',
-            answer:'All of the above'},
+            answer:'All of the above',
+            type:'text'},
         comment:'The process of stopping your car has three main components: perception, reaction and braking. This is usually referred to as stopping distance. The first two components can be affected by human factors such as tiredness, alcohol, fatigue and concentration levels. The last component depends on factors such as: tires, brakes, road, and weather conditions.',
         image:'/images/US.15.02.jpg'
     },
@@ -113,7 +123,8 @@ $scope.questionAnswers=[
             b:'Divided highway ahead',
             c:'Two-way traffic',
             d:'Traffic must merge right',
-            answer:'Two-way traffic'},
+            answer:'Two-way traffic',
+            type:'text'},
         comment:'Two-Way Traffic sign. The sign warns that the road changes from a multi-lane roadway to a two-lane, two-way section. It is also used along such a road.',
         image:'/images/US.05.15.jpg'
     },
@@ -123,7 +134,8 @@ $scope.questionAnswers=[
             b:'On a marked crosswalk',
             c:'On a bridge',
             d:'75 feet from a railroad crossing',
-            answer:'75 feet from a railroad crossing'},
+            answer:'75 feet from a railroad crossing',
+            type:'text'},
         comment:'You can park more than 50 feet of the nearest rail of a railroad crossing.',
         image:'/images/US.23.33.jpg'
     },
@@ -133,7 +145,8 @@ $scope.questionAnswers=[
             b:'300 feet',
             c:'100 feet',
             d:'50 feet',
-            answer:'100 feet'},
+            answer:'100 feet',
+            type:'text'},
         comment:'A turn signal must be given at least 100 feet before the intended turn. This may be accomplished by using either a mechanical signal or the appropriate hand-arm signal.',
         image:'/images/US.20.02.jpg'
     },
@@ -143,7 +156,8 @@ $scope.questionAnswers=[
             b:'Poor road conditions',
             c:'You were driving too fast',
             d:'Brake failure',
-            answer:'You were driving too fast'},
+            answer:'You were driving too fast',
+            type:'text'},
         comment:'Skids are caused by drivers traveling too fast for conditions. If your vehicle does go into a skid, slow down gradually by taking your foot off the accelerator. Never apply the brakes while skidding. Turn the steering wheel in the direction of the skid. If rear of vehicle is skidding to the left you want to steer to the left to bring the front of the vehicle back in the direction you want to go.',
         image:'/images/US.24.02.jpg'
     },
@@ -153,7 +167,8 @@ $scope.questionAnswers=[
             b:'Only illegal if the drug is illegal.',
             c:'Always illegal',
             d:'Brake failure',
-            answer:'Always illegal'},
+            answer:'Always illegal',
+            type:'text'},
         comment:'The use of any drug which impairs your ability to drive safely is illegal.',
         image:'/images/US.36.01.jpg'
     },
@@ -163,7 +178,8 @@ $scope.questionAnswers=[
             b:'No points',
             c:'Two points',
             d:'One point',
-            answer:'No points'},
+            answer:'No points',
+            type:'text'},
         comment:'A violation of the safety belt law is not a moving violation and carries no points on your permanent driving record.',
         image:'/images/US.25.12.jpg'
     },
@@ -173,7 +189,8 @@ $scope.questionAnswers=[
             b:'To the left',
             c:'To the right',
             d:'To the center',
-            answer:'To the right'},
+            answer:'To the right',
+            type:'text'},
         comment:'Work zone channelizing device: barricade. Stripes sloping downward to the right mean pass to the right. Compare with a yellow and black object marker.',
         image:'/images/US.37.05B.jpg'
     },
@@ -183,7 +200,8 @@ $scope.questionAnswers=[
             b:'Within 5-10 seconds',
             c:'Within the distance lighted by your parking lights',
             d:'Within 10-15 seconds',
-            answer:'Within the distance you can see ahead'},
+            answer:'Within the distance you can see ahead',
+            type:'text'},
         comment:'When driving at night, maintain a cautious reasonable speed and make sure you are able to stop in the distance illuminated by your headlights.',
         image:'/images/US.18.13.jpg'
     },
@@ -193,7 +211,8 @@ $scope.questionAnswers=[
             b:'Signal at least 100 feet before the turn',
             c:'Drive close to the right edge of the road',
             d:'Drive close to the right edge of the road',
-            answer:'Honk your horn to warn pedestrians within the crosswalk'},
+            answer:'Honk your horn to warn pedestrians within the crosswalk',
+            type:'text'},
         comment:'You should not honk your horn to warn pedestrians within the crosswalk. A turn signal must be given at least 100 feet before the intended turn. Drive as close as possible to the right-hand curb or edge of the road. Yield to pedestrians. (This question asked what you should not do).',
         image:'/images/US.20.03.jpg'
     },
@@ -203,7 +222,8 @@ $scope.questionAnswers=[
             b:'A motor vehicle has the right-of-way, but should yield for the sake of the pedestrian"s safety.',
             c:'It depends on who reached the crossing first',
             d:'Any motor vehicle',
-            answer:'The pedestrian'},
+            answer:'The pedestrian',
+            type:'text'},
         comment:'A driver must yield the right-of-way to a pedestrian in a marked crosswalk, or at an unmarked crosswalk at an intersection.',
         image:'/images/US.29.11.jpg'
     },
@@ -213,7 +233,8 @@ $scope.questionAnswers=[
             b:'No lights',
             c:'Parking lights',
             d:'Low beam headlights',
-            answer:'Low beam headlights'},
+            answer:'Low beam headlights',
+            type:'text'},
         comment:'Use the low beams in fog, or when it is snowing or raining hard.',
         image:'/images/US.18.23.jpg'
     },
@@ -223,7 +244,8 @@ $scope.questionAnswers=[
             b:'A maximum speed limit sign.',
             c:'An advisory speed sign.',
             d:'Upcoming ramp sign',
-            answer:'An advisory speed sign.'},
+            answer:'An advisory speed sign.',
+            type:'text'},
         comment:'This is an advisory speed sign. It shows the recommended speed, at which the exit ramp from an expressway may be traveled safely.',
         image:'/images/US.05.31B.jpg'
     },
@@ -233,7 +255,8 @@ $scope.questionAnswers=[
             b:'Slow down gradually.',
             c:'Steer in the direction you want the vehicle to go.',
             d:'Brake firm and hard.',
-            answer:'Brake firm and hard.'},
+            answer:'Brake firm and hard.',
+            type:'text'},
         comment:'If your vehicle does go into a skid, slow down gradually by taking your foot off the accelerator. Never apply the brakes while skidding. Turn the steering wheel in the direction of the skid. If rear of vehicle is skidding to the left you want to steer to the left to bring the front of the vehicle back in the direction you want to go. This question asked what you should not do.',
         image:'/images/US.24.02.jpg'
     },
@@ -243,7 +266,8 @@ $scope.questionAnswers=[
             b:'Reduces the risk of a collision.',
             c:'Improves flow of traffic in congested areas.',
             d:'Often contributes to road rage.',
-            answer:'Often contributes to road rage.'},
+            answer:'Often contributes to road rage.',
+            type:'text'},
         comment:'Once you are in a lane, stay in it. Do not weave in and out of lanes. Lane-hopping is dangerous, annoys other drivers, increases the risk of a collision, often contributes to road rage and very seldom saves the driver any significant amount of travel time.',
         image:'/images/US.14.21.jpg'
     },
@@ -251,9 +275,10 @@ $scope.questionAnswers=[
         question:'Which of the following is used as a channeling device to direct traffic flow in a work zone?',
         choices:{a:'/images/US.37.10S.png',
             b:'/images/US.37.11S.png',
-            c:'...',
-            d:'All of the above',
-            answer:'Often contributes to road rage.'},
+            c:'',
+            d:'',
+            answer:'Often contributes to road rage.',
+            type:'image'},
         comment:'Warning signs in the construction series have a distinctive orange background. When motorists see an orange sign, they should be alert, reduce speed, and watch for workers and equipment on the highway.',
         image:'/images/US.14.21.jpg'
     },
@@ -263,7 +288,8 @@ $scope.questionAnswers=[
             b:'True',
             c:'None of the above',
             d:'All of the above',
-            answer:'False'},
+            answer:'False',
+            type:'text'},
         comment:'Persons in vehicles equipped with air bags are not exempt from the safety belt law.',
         image:'/images/US.39.14.jpg'
     },
@@ -273,7 +299,8 @@ $scope.questionAnswers=[
             b:'Stop',
             c:'Do not enter',
             d:'Warning',
-            answer:'Yield'},
+            answer:'Yield',
+            type:'text'},
         comment:'Three-sided red yield signs mean you must slow down and be ready to stop, if necessary, to let any vehicle, bicyclist, or pedestrian pass before you proceed.',
         image:'/images/US.01.04.jpg'
     },
@@ -283,7 +310,8 @@ $scope.questionAnswers=[
             b:'Four points',
             c:'Two points',
             d:'Six points',
-            answer:'No point'},
+            answer:'No point',
+            type:'text'},
         comment:'If the speed limit is less than 55 mph, exceeding the limit by 10 mph or less will not result in any points on your driving record.',
         image:'/images/US.25.38D.jpg'
     },
@@ -293,7 +321,8 @@ $scope.questionAnswers=[
             b:'10 days',
             c:'One year',
             d:'30 days',
-            answer:'One year.'},
+            answer:'One year.',
+            type:'text'},
         comment:'No person can use a falsified driver"s license or one that has been altered or belongs to someone else to buy alcoholic beverages. The penalty for this law is an automatic one-year suspension of driving privileges.',
         image:'/images/US.25.56S.jpg'
     },
@@ -303,7 +332,8 @@ $scope.questionAnswers=[
             b:'A bell, siren, or exhaust whistle.',
             c:'Running board courtesy lights.',
             d:'Windshield wipers',
-            answer:'Windshield wipers'},
+            answer:'Windshield wipers',
+            type:'text'},
         comment:'Windshield wiper is required equipment. A bell, siren, or exhaust whistle is not allowed. A red light showing from the front is not allowed. Running board courtesy lights are optional equipment.',
         image:'/images/US.28.04.jpg'
     },
@@ -313,7 +343,8 @@ $scope.questionAnswers=[
             b:'/images/US.05.14S.png',
             c:'/images/US.05.10S.png',
             d:'/images/US.05.11S.png',
-            answer:'/images/US.05.11S.png'},
+            answer:'/images/US.05.11S.png',
+            type:'image'},
         comment:'Divided Highway Ends. The divided highway on which you are traveling ends ahead. You will then be on a two-lane roadway with two-way traffic. Keep to the right.',
         image:'/images/US.28.04.jpg'
     },
@@ -323,7 +354,8 @@ $scope.questionAnswers=[
             b:'Continue through the roundabout as slow as possible, then stop.',
             c:'Move to the right in the roundabout and stop.',
             d:'Move to the left in the roundabout and stop.',
-            answer:'Continue through the roundabout and then drive to the right as soon as you can and stop.'},
+            answer:'Continue through the roundabout and then drive to the right as soon as you can and stop.',
+            type:'text'},
         comment:'Never stop while inside the roundabout or an intersection. Instead, continue to your exit then pull over to the right shoulder of the roadway.',
         image:'/images/US.22.05.jpg'
     },
@@ -333,7 +365,8 @@ $scope.questionAnswers=[
             b:'Blind spots the same size as cars.',
             c:'Mirrors that eliminate blind spots.',
             d:'Much larger blind spots than cars.',
-            answer:'Much larger blind spots than cars.'},
+            answer:'Much larger blind spots than cars.',
+            type:'text'},
         comment:'Generally speaking, the bigger vehicles are, the bigger their blind spots.',
         image:'/images/US.21.27B.jpg'
     },
@@ -343,7 +376,8 @@ $scope.questionAnswers=[
             b:'Slow down and yield.',
             c:'Slow down and proceed with caution.',
             d:'Slow down and don"t proceed.',
-            answer:'Always bring your car to a complete stop.'},
+            answer:'Always bring your car to a complete stop.',
+            type:'text'},
         comment:'Eight-sided red stop signs mean you must make a full stop. Stop before entering a crosswalk or at a white limit line. If a crosswalk or limit line is not painted on the street, stop at the corner without entering the intersection.',
         image:'/images/US.02.01.jpg'
     },
@@ -353,7 +387,8 @@ $scope.questionAnswers=[
             b:'Leave the car to make sure no train is approaching, then proceed around the gate.',
             c:'Turn around and take another route.',
             d:'Call railroad emergency toll free number, if posted, or 911.',
-            answer:'Call railroad emergency toll free number, if posted, or 911.'},
+            answer:'Call railroad emergency toll free number, if posted, or 911.',
+            type:'text'},
         comment:'If the gates are lowered and no train passes, call the posted railroad emergency toll free number or 911. Be ready to give a detailed description of your location.',
         image:'/images/US.30.09.jpg'
     },
@@ -363,7 +398,8 @@ $scope.questionAnswers=[
             b:'That he plans to turn right.',
             c:'That he plans to turn left.',
             d:'That he is preparing to slow down or stop.',
-            answer:'That he plans to turn left.'},
+            answer:'That he plans to turn left.',
+            type:'text'},
         comment:'Left turn - left arm extended horizontally out of open window.',
         image:'/images/US.20.05B.jpg'
     },
@@ -373,7 +409,8 @@ $scope.questionAnswers=[
             b:'True',
             c:'All of the above',
             d:'None of the above',
-            answer:'False'},
+            answer:'False',
+            type:'text'},
         comment:'In fog or mist, never put your headlights on high beam because the light will be reflected back into your eyes.',
         image:'/images/US.17.07.jpg'
     }

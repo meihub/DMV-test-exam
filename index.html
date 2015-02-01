@@ -22,18 +22,21 @@
         <div class="row choices-section" ng-show="selectedQuestion">
             <div class="question">Question {{questionCount}}/{{totalNumOfQs}}: {{currentQuestion.question}}</div>
             <img class='question image' ng-src="{{currentQuestion.image}}">
-            <div class="panel panel-default" ng-class='{active:clicked==="a"}' ng-click="choiceSelection('a')">
-                <div class="description panel-body">A. {{currentQuestion.choices.a}}</div>
-                <img ng-src="{{currentQuestion.choices.a}}">
+            <div class="panel panel-default" ng-class='{active:clicked==="a"}' ng-switch on="currentQuestion.choices.type" ng-click="choiceSelection('a')">
+                <div class="description panel-body" ng-switch-when="text">A. {{currentQuestion.choices.a}}</div>
+                <img class="description image" ng-switch-when="image" ng-src="{{currentQuestion.choices.a}}">
             </div>
-            <div class="panel panel-default" ng-class='{active:clicked==="b"}' ng-click="choiceSelection('b')">
-                <div class="description panel-body">B. {{currentQuestion.choices.b}}</div>
+            <div class="panel panel-default" ng-class='{active:clicked==="b"}' ng-switch on="currentQuestion.choices.type" ng-click="choiceSelection('b')">
+                <div class="description panel-body" ng-switch-when="text">B. {{currentQuestion.choices.b}}</div>
+                <img class="description image" ng-switch-when="image" ng-src="{{currentQuestion.choices.b}}">
             </div>
-            <div class="panel panel-default" ng-class='{active:clicked==="c"}' ng-click="choiceSelection('c')">
-                <div class="description panel-body">C. {{currentQuestion.choices.c}}</div>
+            <div class="panel panel-default" ng-class='{active:clicked==="c"}' ng-switch on="currentQuestion.choices.type" ng-click="choiceSelection('c')">
+                <div class="description panel-body" ng-switch-when="text">C. {{currentQuestion.choices.c}}</div>
+                <img class="description image" ng-switch-when="image" ng-src="{{currentQuestion.choices.c}}">
             </div>
-            <div class="panel panel-default" ng-class='{active:clicked==="d"}' ng-click="choiceSelection('d')">
-                <div class="description panel-body">D. {{currentQuestion.choices.d}}</div>
+            <div class="panel panel-default" ng-class='{active:clicked==="d"}' ng-switch on="currentQuestion.choices.type" ng-click="choiceSelection('d')">
+                <div class="description panel-body" ng-switch-when="text">D. {{currentQuestion.choices.d}}</div>
+                <img class="description image" ng-switch-when="image" ng-src="{{currentQuestion.choices.d}}">
             </div>
             <button class="glyphicon glyphicon-menu-right" aria-hidden="true" ng-click="nextQuestion(clicked)" ng-disabled='clicked===""'>
             </button>
@@ -54,40 +57,51 @@
             </div>
             <a class='restart' href="/">Restart</a>
             <div class="row test-score-section"  ng-repeat="completedQuestion in completedQuestions">
+                <div>Completed Question Type: {{completedQuestion.choices.type}} </div>
                 <div class="question">Question: {{completedQuestion.question}}</div>
+                <img class='question image' ng-src="{{completedQuestion.image}}">
                 <div class="panel panel-default" ng-class='{selected:completedQuestion.choices.selectedAnswer===completedQuestion.choices.a,correct:completedQuestion.choices.a===completedQuestion.choices.answer,incorrect:completedQuestion.choices.a!==completedQuestion.choices.answer}'>
-                    <div class="description panel-body">
+                    <div class="description panel-body" ng-switch on="completedQuestion.choices.type">
                         <span class="glyphicon glyphicon-ok" ng-if="completedQuestion.choices.selectedAnswer==completedQuestion.choices.answer && completedQuestion.choices.selectedAnswer==completedQuestion.choices.a"></span>
                         <span class="glyphicon glyphicon-remove" ng-if="completedQuestion.choices.selectedAnswer!==completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.a"></span>
-                        A. {{completedQuestion.choices.a}}</div>
-
+                        <div ng-switch-when="text">A. {{completedQuestion.choices.a}}</div>
+                        <img ng-switch-when="image" ng-src="{{completedQuestion.choices.a}}">
+                    </div>
                 </div>
                 <div class="panel panel-default" ng-class='{selected:completedQuestion.choices.selectedAnswer===completedQuestion.choices.b,correct:completedQuestion.choices.b===completedQuestion.choices.answer,incorrect:completedQuestion.choices.b!==completedQuestion.choices.answer}'>
-                    <div class="description panel-body">
+                    <div class="description panel-body" ng-switch on="completedQuestion.choices.type">
                         <span class="glyphicon glyphicon-ok" ng-if="completedQuestion.choices.selectedAnswer===completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.b"></span>
                         <span class="glyphicon glyphicon-remove" ng-if="completedQuestion.choices.selectedAnswer!==completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.b"></span>
-                        B. {{completedQuestion.choices.b}}</div>
+                        <div ng-switch-when="text">B. {{completedQuestion.choices.b}}</div>
+                        <img ng-switch-when="image" ng-src="{{completedQuestion.choices.b}}">
+                    </div>
                 </div>
                 <div class="panel panel-default" ng-class='{selected:completedQuestion.choices.selectedAnswer===completedQuestion.choices.c,correct:completedQuestion.choices.c===completedQuestion.choices.answer,incorrect:completedQuestion.choices.c!==completedQuestion.choices.answer}'>
-                    <div class="description panel-body">
+                    <div class="description panel-body" ng-switch on="completedQuestion.choices.type">
                         <span class="glyphicon glyphicon-ok" ng-if="completedQuestion.choices.selectedAnswer===completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.c"></span>
                         <span class="glyphicon glyphicon-remove" ng-if="completedQuestion.choices.selectedAnswer!==completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.c"></span>
-                        C. {{completedQuestion.choices.c}}</div>
+                        <div ng-switch-when="text">C. {{completedQuestion.choices.c}}</div>
+                        <img ng-switch-when="image" ng-src="{{completedQuestion.choices.b}}">
+                    </div>
                 </div>
                 <div class="panel panel-default" ng-class='{selected:completedQuestion.choices.selectedAnswer===completedQuestion.choices.d,correct:completedQuestion.choices.d===completedQuestion.choices.answer,incorrect:completedQuestion.choices.d!==completedQuestion.choices.answer}'>
-                    <div class="description panel-body">
+                    <div class="description panel-body" ng-switch on="completedQuestion.choices.type">
                         <span class="glyphicon glyphicon-ok" ng-if="completedQuestion.choices.selectedAnswer===completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.d"></span>
                         <span class="glyphicon glyphicon-remove" ng-if="completedQuestion.choices.selectedAnswer!==completedQuestion.choices.answer&&completedQuestion.choices.selectedAnswer===completedQuestion.choices.d"></span>
-                        D. {{completedQuestion.choices.d}}</div>
+                        <div ng-switch-when="text">D. {{completedQuestion.choices.d}}</div>
+                        <img ng-switch-when="image" ng-src="{{completedQuestion.choices.d}}">
+                    </div>
                 </div>
-                <div class="panel panel-default">
-                    <div class="description selected panel-body">SelectedAnswer: {{completedQuestion.choices.selectedAnswer}}</div>
+                <div class="panel panel-default" ng-switch on="completedQuestion.choices.type">
+                    <div class="description selected panel-body" ng-switch-when="text">SelectedAnswer: {{completedQuestion.choices.selectedAnswer}}</div>
+                    <img ng-switch-when="image" ng-src="{{completedQuestion.choices.selectedAnswer}}">
                 </div>
                 <div class="panel panel-default">
                     <div class="description comment panel-body">Comment: {{completedQuestion.comment}}</div>
                 </div>
-                <div class="panel panel-default">
-                    <div class="description answer panel-body">Answer: {{completedQuestion.choices.answer}}</div>
+                <div class="panel panel-default" ng-switch on="completedQuestion.choices.type">
+                    <div class="description answer panel-body" ng-switch-when="text">Answer: {{completedQuestion.choices.answer}}</div>
+                    <img ng-switch-when="image" ng-src="{{completedQuestion.choices.answer}}">
                 </div>
             </div>
         </div>
